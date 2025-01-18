@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: sweet-savvy
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      show-sql: true
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nextjs-dashboard-postgres
+    username: admin
+    password: 1234
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+waf:
+  app:
+    jwtSecret: b6evay2opqwp85u2l6p527riw7obep4ox03c8jln0voptwx7ghxkcflm7saqa2skaghe3mm0phj75tz7alajdn60i17hsoa2vnx8uf9z3wc1jx3t6v02im429olpdtrc
+    jwtExpirationMs: 21600000
+    refresh:
+      jwtExpirationMs: 86400000

@@ -1,0 +1,2 @@
+INSERT INTO users (id, email, password, name, phone_no, address)
+VALUES (1, 'test@news360horizon.com', '$2a$10$q9nFxk.iYzNM/gO5t3R7QeSzXRH2jzCzQqRe5DCr7e3qOnZ4NdAxy', 'test', '01700000000', 'Baridhara, Dhaka');
