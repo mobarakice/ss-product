@@ -1,12 +1,12 @@
 package com.sweetsavvy.core.service;
 
 import com.sweetsavvy.core.entity.Customer;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface CustomerService {
 
-    List<Customer> findAll();
+    Page<Customer> findAll(Pageable pageable);
     Customer findById(String id);
     Long totalCustomersCount();
 }

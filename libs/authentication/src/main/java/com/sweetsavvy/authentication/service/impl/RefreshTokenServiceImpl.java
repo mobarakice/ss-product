@@ -17,7 +17,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class RefreshTokenServiceImpl implements RefreshTokenService {
-    @Value("${waf.app.refresh.jwtExpirationMs}")
+    @Value("${app.refresh.jwtExpirationMs}")
     private int jwtRefreshExpirationMs;
 
     private final JwtUtil jwtUtils;

@@ -1,7 +1,7 @@
 [versions]
 springBoot = "3.3.4"
 springBootDM = "1.1.6"
-springDoc = "1.8.0"
+springDoc = "2.3.0"
 jsonpath = "2.8.1"
 modelMapper = "3.2.0"
 modelMapperRecord = "1.0.0"
@@ -25,7 +25,7 @@ starter-test = { group = "org.springframework.boot", name = "spring-boot-starter
 postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
 mysql = { module = "mysql:mysql-connector-java", version.ref = "mysql" }
 hibernate = { group = "org.hibernate.orm", name = "hibernate-core", version.ref = "hibernate" }
-springdoc-openapi-ui = { module = "org.springdoc:springdoc-openapi-ui", version.ref = "springDoc" }
+springdoc-openapi-ui = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springDoc" }
 springdoc-openapi-data-rest = { module = "org.springdoc:springdoc-openapi-data-rest", version.ref = "springDoc" }
 jsonpath = { module = "com.jayway.jsonpath:json-path", version.ref = "jsonpath" }
 modelmapper = { module = "org.modelmapper:modelmapper", version.ref = "modelMapper" }
