@@ -1,6 +1,7 @@
 package com.sweetsavvy.core.service.impl;
 
 import com.sweetsavvy.core.entity.Customer;
+import com.sweetsavvy.core.model.FilteredCustomer;
 import com.sweetsavvy.core.repository.CustomerRepository;
 import com.sweetsavvy.core.service.CustomerService;
 import lombok.RequiredArgsConstructor;
@@ -26,5 +27,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Long totalCustomersCount() {
         return repository.count();
+    }
+
+    @Override
+    public Page<FilteredCustomer> searchCustomers(String query, Pageable pageable) {
+        return repository.searchCustomers(query, pageable);
     }
 }
