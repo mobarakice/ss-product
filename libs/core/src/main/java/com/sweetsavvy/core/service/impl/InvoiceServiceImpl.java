@@ -49,9 +49,9 @@ public class InvoiceServiceImpl implements InvoiceService {
 
     @Override
     public Invoice update(String id, InvoiceDto invoiceDto) {
-        var invoice = repository.findById(id).orElseThrow(()-> new RuntimeException("No invoice found"));
+        var invoice = repository.findById(id).orElseThrow(() -> new RuntimeException("No invoice found"));
         var customer = customerRepository.findById(invoiceDto.customerId())
-                .orElseThrow(()-> new RuntimeException("No customer found"));
+                .orElseThrow(() -> new RuntimeException("No customer found"));
 
         invoice.setCustomer(customer);
         invoice.setAmount(invoice.getAmount());

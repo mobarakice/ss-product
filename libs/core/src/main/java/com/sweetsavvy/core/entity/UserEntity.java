@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -42,7 +43,9 @@ public class UserEntity implements UserDetails {
 
     @PrePersist
     public void generateId() {
-        this.id = UUID.randomUUID().toString();
+        if(Strings.isBlank(id)) {
+            this.id = UUID.randomUUID().toString();
+        }
     }
 
 //    @ManyToMany(fetch = FetchType.EAGER)

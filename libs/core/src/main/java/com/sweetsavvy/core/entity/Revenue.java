@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.logging.log4j.util.Strings;
 
 import java.util.UUID;
 
@@ -22,6 +23,8 @@ public class Revenue {
 
     @PrePersist
     public void generateId() {
-        this.id = UUID.randomUUID().toString();
+        if(Strings.isBlank(id)) {
+            this.id = UUID.randomUUID().toString();
+        }
     }
 }
