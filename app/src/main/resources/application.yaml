@@ -1,3 +1,12 @@
 spring:
   profiles:
     active: dev
+
+  graphql:
+    path: /graphql
+    graphiql:
+      enabled: true  # Enable GraphiQL UI
+    introspection:
+      enabled: true  # Allow schema inspection
+    cors:
+      allowed-origins: "*"

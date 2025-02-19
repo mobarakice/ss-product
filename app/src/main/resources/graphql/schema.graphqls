@@ -1,0 +1,103 @@
+"""
+This is the main schema of this project.
+"""
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+"""
+Invoice type represents a customer's invoice.
+"""
+type Invoice {
+    """
+    Unique identifier
+    """
+    id: String!
+    """
+    Customer name
+    """
+    name: String!
+    """
+    Customer email
+    """
+    email: String
+    """
+    Image URL
+    """
+    imageUrl: String!
+    """
+    Invoice amount
+    """
+    amount: String!
+    """
+    Invoice status (e.g., PAID, UNPAID)
+    """
+    status: String!
+    """
+    Invoice creation date
+    """
+    date: Date!
+}
+
+"""
+Paginated response for invoices
+"""
+type PaginatedInvoice {
+    currentPage: Int!
+    totalPage: Int
+    totalElement: Long
+    content: [Invoice!]!
+}
+
+"""
+Input for creating a new invoice
+"""
+input InvoiceDto {
+    customerId: String!
+    amount: String!
+    status: String!
+}
+
+"""
+Input for searching invoices
+"""
+input SearchInvoice {
+    query: String!
+    page: Int = 0
+    size: Int = 10
+}
+
+"""
+GraphQL Queries
+"""
+type Query {
+    """
+    Fetch the latest invoices
+    """
+    latestInvoice: [Invoice]!
+    """
+    Search and filter invoices
+    """
+    filteredInvoice(input: SearchInvoice!): PaginatedInvoice!
+}
+
+"""
+GraphQL Mutations
+"""
+type Mutation {
+    """
+    Create a new invoice
+    """
+    createInvoice(input: InvoiceDto!): Invoice!
+}
+
+"""
+Scalar type for handling large numbers
+"""
+scalar Long
+
+"""
+Scalar type for handling dates
+"""
+scalar Date

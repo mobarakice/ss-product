@@ -14,6 +14,7 @@ jjwt = "0.12.6"
 [libraries]
 starter-data-jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-data-jdbc" }
 starter-data-jpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa" }
+starter-graphql = { group = "org.springframework.boot", name = "spring-boot-starter-graphql" }
 starter-data-rest = { group = "org.springframework.boot", name = "spring-boot-starter-data-rest" }
 starter-jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-jdbc" }
 starter-security = { group = "org.springframework.boot", name = "spring-boot-starter-security" }
