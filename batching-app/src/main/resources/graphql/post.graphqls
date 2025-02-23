@@ -1,0 +1,20 @@
+extend type Query {
+    petById(id: ID!): Pet
+}
+
+type Pet {
+    id: ID!
+    name: String!
+    visits: [Visit]
+}
+
+type Visit {
+    id: ID!
+    petId: ID!
+    veterinarian: Vet
+}
+
+type Vet {
+    id: ID!
+    name: String!
+}

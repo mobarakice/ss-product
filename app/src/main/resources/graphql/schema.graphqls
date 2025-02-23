@@ -44,10 +44,10 @@ type Invoice {
 Paginated response for invoices
 """
 type PaginatedInvoice {
-    currentPage: Int!
+    currentPage: Int
     totalPage: Int
     totalElement: Long
-    content: [Invoice!]!
+    content: [Invoice]
 }
 
 """
@@ -79,7 +79,7 @@ type Query {
     """
     Search and filter invoices
     """
-    filteredInvoice(input: SearchInvoice!): PaginatedInvoice!
+    filteredInvoice(input: SearchInvoice!): PaginatedInvoice
 }
 
 """

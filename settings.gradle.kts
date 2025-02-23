@@ -19,5 +19,6 @@ rootProject.name = "sweetsavvy"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 include(":app")
+include(":batching-app")
 include(":libs:core")
 include(":libs:authentication")
